@@ -1,0 +1,14 @@
+<div class="row row-cols-1 row-cols-md-6 g-4">
+    <div class="card" *ngFor="let p of prodotti">
+      <img [src]="p.image" class="card-img-top" alt="..." *ngIf="p.rating?.rate! >=3" >
+      <div class="card-body">
+        <h5 class="card-title">{{p.title}}</h5>
+        <p class="card-text">{{p.description |uppercase}}</p>
+        <p class="card-text">prezzo:{{p.price |currency:"€" }}</p>
+        <p class="card-text">{{p.category}}</p>
+        <h2 class="card-text">rating:</h2>
+        <p class="card-text">{{p.rating?.count}}</p>
+        <p class="card-text">{{p.rating?.rate}}</p>
+</div>
+    </div>
+  
